@@ -38,7 +38,7 @@ Widget profileScrollPage() {
                       Padding(
                         padding: const EdgeInsets.only(top: 3),
                         child: Image.asset(
-                          "assets/profile_icons/ic_official.png",
+                          "assets/images/profile/profile_icons/ic_official.png",
                           scale: 1.8,
                         ),
                       ),
@@ -81,7 +81,7 @@ Widget profileScrollPage() {
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     leading: Image.asset(
-                        "assets/profile_icons/ic_person_box_in.png"),
+                        "assets/images/profile/profile_icons/ic_person_box_in.png"),
                     trailing:  const Icon(
                       Icons.chevron_right,
                       size: 28,
@@ -97,7 +97,7 @@ Widget profileScrollPage() {
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     leading:
-                        Image.asset("assets/profile_icons/ic_gift.png"),
+                        Image.asset("assets/images/profile/profile_icons/ic_gift.png"),
                     trailing:  const Icon(
                       Icons.chevron_right,
                       size: 28,
@@ -112,7 +112,7 @@ Widget profileScrollPage() {
                       "Частно задаваемые вопросы",
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
-                    leading: Image.asset("assets/profile_icons/ic_faq.png"),
+                    leading: Image.asset("assets/images/profile/profile_icons/ic_faq.png"),
                     trailing: const  Icon(
                       Icons.chevron_right,
                       size: 28,
@@ -128,7 +128,7 @@ Widget profileScrollPage() {
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     leading:
-                        Image.asset("assets/profile_icons/ic_about.png"),
+                        Image.asset("assets/images/profile/profile_icons/ic_about.png"),
                     trailing: const  Icon(
                       Icons.chevron_right,
                       size: 28,
@@ -144,7 +144,7 @@ Widget profileScrollPage() {
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     leading:
-                        Image.asset("assets/profile_icons/ic_exit.png"),
+                        Image.asset("assets/images/profile/profile_icons/ic_exit.png"),
                     trailing:  const Icon(
                       Icons.chevron_right,
                       size: 28,
@@ -166,7 +166,7 @@ SizedBox(height: 20,)                ],
                 radius: 50,
                 child: CircleAvatar(
                   backgroundImage:
-                      AssetImage("assets/images/profileTab_image.png"),
+                      AssetImage("assets/images/profile/profileTab_image.png"),
                   radius: 48,
                 ),
               ),
