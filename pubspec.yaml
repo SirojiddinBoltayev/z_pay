@@ -42,6 +42,8 @@ flutter:
   assets:
     - assets/images/splash/
     - assets/images/profile/
+    - assets/images/faq/
+    - assets/images/payments/
     - assets/images/profile/images/
     - assets/images/profile/profile_icons/
     - assets/images/instruction/

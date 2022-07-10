@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-Widget FaqAppBar(){
+import 'package:z_pay/screens/pages/profilePage/profile_page.dart';
+Widget FaqAppBar(context){
   return   AppBar(
 
       elevation: 0,
@@ -21,23 +22,29 @@ Widget FaqAppBar(){
             borderRadius: BorderRadius.circular(5),
 
           ),
-          child: Container(
-            height: 35,
-            width: 35,
-            margin: EdgeInsets.only(top: 0.5,bottom: 0.5,left: 0.5,right: 0.5),
-            decoration: BoxDecoration(
-              color: Colors.white,
+          child: InkWell(
+            splashColor: Colors.white30,
+            onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext)=> ProfilePage()));
+            },
+            child: Container(
+              height: 35,
+              width: 35,
+              margin: EdgeInsets.only(top: 0.5,bottom: 0.5,left: 0.5,right: 0.5),
+              decoration: BoxDecoration(
+                color: Colors.white,
 
-              borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(5),
 
-            ),
-            child: InkWell(
-              borderRadius: BorderRadius.circular(120),
+              ),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(120),
 
-              child: Icon(
-                Icons.arrow_back_ios_new_outlined,
-                color: Colors.blue,
-                size: 18,
+                child: Icon(
+                  Icons.arrow_back_ios_new_outlined,
+                  color: Colors.blue,
+                  size: 18,
+                ),
               ),
             ),
           ),

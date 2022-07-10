@@ -1,7 +1,14 @@
-
 import 'package:flutter/material.dart';
+import 'package:z_pay/screens/pages/faqPages/faq_page.dart';
 
-Widget profileScrollPage() {
+Widget profileScrollPage(context) {
+  String name = "Marina Volkova";
+  String icon_profile = "assets/images/profile/profile_icons/ic_person_box_in.png";
+  String icon_prize = "assets/images/profile/profile_icons/ic_gift.png";
+  String icon_faq = "assets/images/profile/profile_icons/ic_faq.png";
+  String icon_info = "assets/images/profile/profile_icons/ic_about.png";
+  String icon_logout =  "assets/images/profile/profile_icons/ic_exit.png";
+
   return SingleChildScrollView(
     child: Stack(
       children: [
@@ -17,15 +24,15 @@ Widget profileScrollPage() {
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children:[
+                children: [
                   const SizedBox(
                     height: 70,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        "Marina Volkova",
+                      Text(
+                        name,
                         style: TextStyle(
                             fontFamily: "Montserrat",
                             fontWeight: FontWeight.bold,
@@ -49,7 +56,7 @@ Widget profileScrollPage() {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  const [
+                    children: const [
                       Text(
                         "ID: 233256",
                         style: TextStyle(fontSize: 16, color: Colors.green),
@@ -76,29 +83,29 @@ Widget profileScrollPage() {
                     ),
                   ),
                   ListTile(
-                    title:  const Text(
+                    title: const Text(
                       "Личная информация",
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     leading: Image.asset(
-                        "assets/images/profile/profile_icons/ic_person_box_in.png"),
-                    trailing:  const Icon(
+                        icon_profile),
+                    trailing: const Icon(
                       Icons.chevron_right,
                       size: 28,
                     ),
                   ),
-                  const  Divider(
+                  const Divider(
                     indent: 18,
                     endIndent: 18,
                   ),
                   ListTile(
-                    title: const  Text(
+                    title: const Text(
                       "Потратить бонусы",
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
-                    leading:
-                        Image.asset("assets/images/profile/profile_icons/ic_gift.png"),
-                    trailing:  const Icon(
+                    leading: Image.asset(
+                        icon_prize),
+                    trailing: const Icon(
                       Icons.chevron_right,
                       size: 28,
                     ),
@@ -108,12 +115,17 @@ Widget profileScrollPage() {
                     endIndent: 18,
                   ),
                   ListTile(
-                    title: const  Text(
+                    onTap:
+                    (){
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext)=> FaqPage()));
+                    },
+                    title: const Text(
                       "Частно задаваемые вопросы",
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
-                    leading: Image.asset("assets/images/profile/profile_icons/ic_faq.png"),
-                    trailing: const  Icon(
+                    leading: Image.asset(
+                        icon_faq),
+                    trailing: const Icon(
                       Icons.chevron_right,
                       size: 28,
                     ),
@@ -123,13 +135,13 @@ Widget profileScrollPage() {
                     endIndent: 18,
                   ),
                   ListTile(
-                    title: const  Text(
+                    title: const Text(
                       "О приложении",
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
-                    leading:
-                        Image.asset("assets/images/profile/profile_icons/ic_about.png"),
-                    trailing: const  Icon(
+                    leading: Image.asset(
+                        icon_info),
+                    trailing: const Icon(
                       Icons.chevron_right,
                       size: 28,
                     ),
@@ -139,18 +151,21 @@ Widget profileScrollPage() {
                     endIndent: 18,
                   ),
                   ListTile(
-                    title:  const Text(
+                    title: const Text(
                       "Личная информация",
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
-                    leading:
-                        Image.asset("assets/images/profile/profile_icons/ic_exit.png"),
-                    trailing:  const Icon(
+                    leading: Image.asset(
+                       icon_logout),
+                    trailing: const Icon(
                       Icons.chevron_right,
                       size: 28,
                     ),
                   ),
-SizedBox(height: 20,)                ],
+                  SizedBox(
+                    height: 20,
+                  )
+                ],
               ),
             ),
           ],

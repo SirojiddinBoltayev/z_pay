@@ -21,12 +21,16 @@ class _MyIdTwoPageState extends State<MyIdTwoPage> {
           controller: CountDownController(),
           width: 280,
           height: 280,
-          ringColor: context.watch<ViewModel>().downTime
+          ringColor: context
+              .watch<ViewModel>()
+              .downTime
               ? Color(0xffEB5757)
               : Color(0xffF5F5F5),
           fillColor: Color(0xff1A3FC7),
           backgroundGradient:
-              LinearGradient(colors: [Color.fromARGB(255, 100, 100, 100), Color.fromARGB(255, 174, 172, 172)],begin: Alignment.topRight,end: Alignment.bottomLeft,transform: ),
+          LinearGradient(colors: [Color.fromARGB(255, 100, 100, 100), Color
+              .fromARGB(255, 174, 172, 172)
+          ], begin: Alignment.topRight, end: Alignment.bottomLeft, ),
           strokeWidth: 5.0,
           strokeCap: StrokeCap.round,
           textStyle: TextStyle(

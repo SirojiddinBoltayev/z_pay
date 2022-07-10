@@ -1,78 +1,74 @@
-import 'package:flutter/material.dart';
-import 'package:z_pay/screens/pages/PaymentsPages/first_payment_page.dart';
-import 'package:z_pay/screens/pages/paymentsPages/widget/payment_page_button.dart';
-import 'package:z_pay/screens/pages/paymentsPages/widget/payments_appbar.dart';
 
-Widget MobilePaymentPage(
-  context,
-) {
-  var backRoute = PaymentHomePage();
-  String appBarName = "Моб. связь";
-  return Scaffold(
-    appBar: PreferredSize(
-      preferredSize: Size.fromHeight(70),
-      child: PaymentsAppBar(context, appBarName, backRoute),
-    ),
-    body: SingleChildScrollView(
-      child: SizedBox(
-        width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(left: 22, top: 44),
-              child: Text(
-                "Выберите компанию",
-                style: TextStyle(fontSize: 28, color: Colors.black),
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 15,
+import 'package:flutter/material.dart';
+
+Widget textfromNumMobile(){
+  return             Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Container(
+        margin: const EdgeInsets.only(left: 20,bottom: 10,top: 20),
+        child: Text("Номер  телефона",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16),),
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 5),
+        child: Material(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          child: TextFormField(
+
+              decoration:InputDecoration(
+                fillColor: Colors.grey,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                  borderSide: BorderSide(
+                    color: Colors.blue,
+                  ),
                 ),
-                PaymentButton(context,"assets/images/payments/ic_beeline.png"),
-                SizedBox(
-                  width: 15,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 2.0,
+                  ),
                 ),
-                PaymentButton(context,"assets/images/payments/ic_ucell.png"),
-                SizedBox(
-                  width: 15,
-                ),
-                PaymentButton(context,"assets/images/payments/ic_mobiuz.png"),
-                SizedBox(
-                  width: 15,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 15,
-                ),
-                PaymentButton(context,"assets/images/payments/ic_humans.png"),
-                SizedBox(
-                  width: 15,
-                ),
-                PaymentButton(context,"assets/images/payments/ic_perfectum.png"),
-                SizedBox(
-                  width: 15,
-                ),
-                PaymentButton(context,"assets/images/payments/ic_uzmobile.png"),
-                SizedBox(
-                  width: 15,
-                ),
-              ],
-            ),
-          ],
+              )
+          ),
         ),
       ),
-    ),
+      Container(
+        margin: const EdgeInsets.only(left: 20,bottom: 10,top: 20),
+        child: Text("Сумма платежа",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16),),
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 5),
+        child: Material(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          child: TextFormField(
+
+              decoration:InputDecoration(
+                fillColor: Colors.grey,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                  borderSide: BorderSide(
+                    color: Colors.blue,
+                  ),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 2.0,
+                  ),
+                ),
+              )
+          ),
+        ),
+      ),
+      Expanded(
+        child: SizedBox(),
+      ),
+    ],
   );
+
 }

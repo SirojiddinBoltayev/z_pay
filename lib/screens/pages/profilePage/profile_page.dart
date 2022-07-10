@@ -25,7 +25,7 @@ class ProfilePage extends StatelessWidget {
             ),
             // Text("Salom"),
             //
-profileScrollPage(),
+profileScrollPage(context),
           ],
         ),
 
